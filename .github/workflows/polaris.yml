@@ -31,5 +31,8 @@ jobs:
           polaris_reports_sarif_create: true
           polaris_upload_sarif_report: true
           
+          ### Test Build-less mode
+          polaris_assessment_mode: SOURCE_UPLOAD
+          
           ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
