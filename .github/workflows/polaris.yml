@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
   
 jobs:
   build:
@@ -32,7 +36,7 @@ jobs:
           polaris_upload_sarif_report: true
           
           ### Test Build-less mode
-          polaris_assessment_mode: SOURCE_UPLOAD
+          #polaris_assessment_mode: SOURCE_UPLOAD
           
           ### Signature scan
           #polaris_test_sca_type: "SCA-SIGNATURE"
