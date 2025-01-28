@@ -26,7 +26,7 @@ jobs:
             -   name: Setup Python
                 uses: actions/setup-python@v5
                 with:
-                    python-version: '3.7'
+                    python-version: '3.13.1'
                     architecture: x64
             # Uses an action to add JDK 21 to the VM (and mvn?)
             -   name: set up JDK 21
@@ -55,7 +55,7 @@ jobs:
             # send report to forks only due to limits on permission tokens
             -   name: Send report to commit
                 if: github.repository != 'WebGoat/WebGoat' && github.event_name == 'push'
-                uses: joonvena/robotframework-reporter-action@v2.2
+                uses: joonvena/robotframework-reporter-action@v2.5
                 with:
                     gh_access_token: ${{ secrets.GITHUB_TOKEN }}
                     report_path: 'robotreport'
